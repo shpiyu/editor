@@ -1,0 +1,45 @@
+#toolbar{
+    background: #585858;
+    width: 100%; 
+    display: flex;
+}
+
+
+
+.tool-buttons button{
+    margin: 0 2px 0 2px ;
+    font-size: 1.2em;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 4px;
+    width: 37px;
+}
+
+.tool-buttons button:hover, .tool-btn:hover {
+    border: 1px solid #494949;
+    background: #444444;
+}
+
+.tool-btn{
+    background: #585858;
+    color: white;
+    cursor: pointer;
+    font-size: 1.4em;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 4px;
+}
+
+.tool-separator {
+    font-size: 1.5em;
+    border-left: 1px solid #716f6f;
+    width: 1px;
+    margin: 0px 2px;
+}
+
+.tool-buttons {
+    display: inline-block;
+}

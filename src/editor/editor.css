@@ -1,0 +1,26 @@
+#editor{
+  height: 120vh;
+  padding: 12px;
+  overflow-y: scroll;
+}
+
+#editor:focus, #postTitle:focus{
+  outline: none;
+}
+
+#postTitle{
+  padding: 12px 12px;
+  font-size: 1.2em;
+  font-weight: 500;
+
+}
+
+#editor a{
+  color: cornflowerblue;
+}
+
+#editor a:hover{
+  color: rgb(55, 114, 224);
+  text-decoration: underline;
+  cursor: pointer;
+}

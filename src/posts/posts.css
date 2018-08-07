@@ -1,0 +1,67 @@
+.posts{
+    padding: 12px;
+}
+
+.post{
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 2px 0px lightgrey;
+    margin-bottom: 16px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+}
+
+.post p{
+    display: inline-block;
+    flex-grow: 9;
+    margin: 0;
+    padding: 16px 12px;
+}
+
+.deletePostBtn{
+    float: right;
+    flex-grow: 1;
+    padding: 16px 12px;
+    cursor: pointer;
+    visibility: hidden;
+    text-align: right;
+}
+
+@media(pointer: coarse) {
+    .deletePostBtn{
+        visibility: visible;
+    }
+}
+
+.post:hover{
+    box-shadow: 0px 0px 2px 1px lightgrey;
+}
+
+.post:hover .deletePostBtn{
+    display: block;
+    visibility: visible;
+    color: lightgray;
+}
+
+.post:hover .deletePostBtn:hover {
+    color: #585858;
+}
+
+
+.new-post button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: lightgray;
+    cursor: pointer;
+    margin: 24px;
+}
+
+.new-post button:hover{
+    color: #585858;
+}
+
+.new-post{
+    text-align: center;
+}

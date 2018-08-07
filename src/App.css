@@ -1,0 +1,52 @@
+.app{
+  width: 100%;
+  max-width: 1086px;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightgray;
+}
+
+a:hover {
+  color: #585858;
+}
+
+button:focus{
+  outline: none;
+}
+
+[contenteditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block; 
+  color: lightgray;
+  font-weight: 100;
+}
+
+@media print {
+  .postContainer {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 18px;
+}
+}
+
+@media(min-width:1024px) {
+  .app{
+    margin: 0 auto;
+  }
+}
