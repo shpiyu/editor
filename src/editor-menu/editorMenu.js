@@ -74,8 +74,9 @@ class EditorMenu extends Component {
                     <span className="preview-mode-btns">
 
                         <button id="editBtn" onClick={this.editPost}> EDIT </button>
-                        {saveUpdateBtn}
                         <button id="printBtn" onClick={() => window.print()}> PRINT </button>
+                        {saveUpdateBtn}
+                        
                     </span>
                     <button id="previewBtn" onClick={this.previewPost}> PREVIEW </button>
                     
