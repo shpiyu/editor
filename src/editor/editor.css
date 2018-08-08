@@ -14,7 +14,10 @@
   font-weight: 500;
 
 }
-
+input#postTitle{
+  border: none;
+  width: 100%;
+}
 #editor a{
   color: cornflowerblue;
 }

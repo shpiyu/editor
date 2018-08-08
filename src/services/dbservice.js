@@ -12,7 +12,7 @@ export const deletePost = (id) => {
 }
 
 export const createPost = (post) => {
-    fetch('https://c-m-editor.firebaseio.com/posts.json', {
+    return fetch('https://c-m-editor.firebaseio.com/posts.json', {
         method: "POST",
         body: JSON.stringify(post)
     });
@@ -24,7 +24,7 @@ export const fetchPost = (id) => {
 }
 
 export const updatePost = (id, post) => {
-    fetch(`https://c-m-editor.firebaseio.com/posts/${id}.json`, {
+    return fetch(`https://c-m-editor.firebaseio.com/posts/${id}.json`, {
         method: "PATCH",
         body: JSON.stringify(post)
     });

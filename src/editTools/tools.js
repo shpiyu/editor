@@ -95,7 +95,3 @@ export const BtnUploadImage = () => {
 }
 
 
-function throwError(msg) {
-    console.log("ERROR: " + msg);
-}
-

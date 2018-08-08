@@ -40,19 +40,19 @@ class EditorMenu extends Component {
     createPost() {
         const editor = document.getElementById("editor");
         const html = editor.innerHTML;
-        const title = document.getElementById('postTitle').innerHTML;
+        const title = document.getElementById('postTitle').value;
         let post = { text: html, createdAt: new Date(), title: title }
-        createPost(post);
-        this.props.history.push("/posts");
+        createPost(post).then(res => this.props.history.push("/posts"));
+        
     }
 
     updatePost(id) {
         const editor = document.getElementById("editor");
         const html = editor.innerHTML;
-        const title = document.getElementById('postTitle').innerHTML;
+        const title = document.getElementById('postTitle').value;
         let post = { text: html, createdAt: new Date(), title: title }
-        updatePost(id, post);
-        this.props.history.push("/posts");
+        updatePost(id, post).then(res => this.props.history.push("/posts"));
+        
     }
 
 

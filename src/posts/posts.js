@@ -52,7 +52,6 @@ class Posts extends Component {
         this.setState({showSpinner: true});
 
         deletePost(this.state.deleteModalId).then((res) => {
-            console.log(this.state.deleteModalId);
             this.loadAllPosts();
         });
 
@@ -62,7 +61,6 @@ class Posts extends Component {
     }
 
     handleClick(id) {
-        console.log("clicked ", id);
         this.props.history.push(`/editor/${id}`);
     }
 
@@ -83,8 +81,6 @@ class Posts extends Component {
                     handleClick={this.handleClick}
                     title={this.state.posts[key].title} />
             });
-        } else {
-            console.log("empty posts")
         }
         return (
             <div>

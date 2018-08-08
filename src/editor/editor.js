@@ -26,7 +26,6 @@ class Editor extends Component {
   }
 
   handleDrop(e) {
-    console.log("drop");
     e.preventDefault();
     if (e.dataTransfer.files[0].type.match("image.*")) {
       let reader = new FileReader();
@@ -40,13 +39,10 @@ class Editor extends Component {
         //document.execCommand("insertImage",false,dataURI);
       }
       reader.readAsDataURL(e.dataTransfer.files[0])
-    } else {
-      console.log("cheating")
-    }
+    } 
   }
 
   handleDragOver(e) {
-    console.log("drag");
     e.preventDefault();
   }
 
@@ -69,7 +65,7 @@ class Editor extends Component {
     const editor = document.getElementById("editor");
     editor.innerHTML = post.text;
     const title = document.getElementById("postTitle");
-    title.innerHTML = post.title ? post.title : "Enter a title";
+    title.value = post.title ? post.title : null;
     editor.focus();
   }
 
@@ -79,7 +75,7 @@ class Editor extends Component {
         <EditorMenu id={this.props.match.params.id} />
         <ToolBar id={this.props.match.params.id} />
         <div className="postContainer">
-          <div id="postTitle" contentEditable placeholder="Enter a title"></div>
+          <input id="postTitle" placeholder="Enter a title"></input>
           <div id="editor" contentEditable placeholder="Write your story..." onDrop={e => this.handleDrop(e)} onDragOver={e => this.handleDragOver(e)}>
           </div>
         </div>
