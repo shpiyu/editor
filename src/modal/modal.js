@@ -15,7 +15,7 @@ export default class Modal extends Component {
                         <button onClick={this.props.onClose} className="footer-btn footer-btn-cancel">
                             {this.props.closeText}
                         </button>
-                        <button onClick={this.props.onSubmit} className="footer-btn footer-btn-delete">
+                        <button onClick={this.props.onSubmit} className={ this.props.isDanger ? "footer-btn footer-btn-delete" : "footer-btn footer-btn-ok"}>
                             {this.props.submitText}
                         </button>
                     </div>

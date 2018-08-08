@@ -6,7 +6,8 @@ import './editorMenu.css';
 class EditorMenu extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
+        
         this.previewPost = this.previewPost.bind(this);
         this.createPost = this.createPost.bind(this);
         this.editPost = this.editPost.bind(this);
@@ -81,6 +82,8 @@ class EditorMenu extends Component {
                     <button id="previewBtn" onClick={this.previewPost}> PREVIEW </button>
                     
                 </div>
+
+                
             </div>
         )
     }

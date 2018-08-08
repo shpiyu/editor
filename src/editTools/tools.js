@@ -52,14 +52,10 @@ export const BtnJustify = () => {
     )
 }
 
-export const BtnHyperlink = () => {
+export const BtnHyperlink = (props) => {
     return (
         <button title="cretae a hyperlink"
-            onClick={() => {
-                const link = window.prompt("Type or paste full url", "http://");
-                link ? document.execCommand("createLink", false, link) : throwError("invalid url");
-
-            }}>
+            onClick={props.clickHandle}>
             <i className="fas fa-link" ></i>
         </button>
     )

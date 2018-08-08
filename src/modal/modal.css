@@ -19,12 +19,16 @@
     position: relative;
 }
 
+.modal input{
+    height: 24px;
+    width: 100%;
+}
+
 
 .footer {
-    position: absolute;
     bottom: 0;
-    margin: 24px 0;
-    width: 85%;
+    margin: 24px 0 0 0;
+    width: 100%;
 }
 
 .footer-btn{
@@ -44,6 +48,18 @@
 
 .footer-btn-cancel:hover {
     background: rgb(221, 220, 220);
+}
+
+.footer-btn-ok {
+    float: right;
+    color: white;
+    background: #607d8b;
+}
+
+.footer-btn-ok:hover {
+    float: right;
+    color: white;
+    background: #506874;
 }
 
 .footer-btn-delete{

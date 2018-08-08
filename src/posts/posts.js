@@ -99,7 +99,7 @@ class Posts extends Component {
 
                     <NewPostBtn />
                     <Modal show={this.state.showDeleteModal} closeText="cancel" submitText="delete" onClose={this.closeModal}
-                        onSubmit={this.deletePost}>
+                        onSubmit={this.deletePost} isDanger={true}>
                         <p>Are you sure you want to delete this post?</p>
                     </Modal>
                     
