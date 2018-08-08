@@ -15,9 +15,10 @@
     max-width: 350px;
     min-height: 100px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 12px 24px 24px;
     position: relative;
 }
+
 
 .footer {
     position: absolute;
@@ -37,8 +38,12 @@
     padding: 10px 12px;
 }
 
-.footer-btn-cancel:hover {
+.footer-btn-cancel {
     background: rgb(245, 243, 243);
+}
+
+.footer-btn-cancel:hover {
+    background: rgb(221, 220, 220);
 }
 
 .footer-btn-delete{

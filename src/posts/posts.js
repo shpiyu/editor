@@ -6,6 +6,7 @@ import Header from '../header/header';
 import { loadAllPosts, deletePost } from '../services/dbservice';
 import { withRouter } from 'react-router-dom';
 import Modal from '../modal/modal';
+import Spinner from '../spinner/spinner';
 
 class Posts extends Component {
 
@@ -21,7 +22,8 @@ class Posts extends Component {
         this.state = {
             posts: [],
             showDeleteModal: false,
-            deleteModalId: null
+            deleteModalId: null,
+            showSpinner: true
         };
 
         this.loadAllPosts();
@@ -33,7 +35,7 @@ class Posts extends Component {
             this.setState({
                 posts: posts
             });
-            console.log(posts);
+            this.setState({showSpinner: false})
 
         });
     }
@@ -47,6 +49,8 @@ class Posts extends Component {
 
     deletePost() {
         this.closeModal();
+        this.setState({showSpinner: true});
+
         deletePost(this.state.deleteModalId).then((res) => {
             console.log(this.state.deleteModalId);
             this.loadAllPosts();
@@ -85,16 +89,20 @@ class Posts extends Component {
         return (
             <div>
                 <Header />
+                <div style={{textAlign: 'center', margin: 24}}>
+                    <Spinner show={this.state.showSpinner}/>
+                </div>
                 <div className="posts">
 
 
-                    {posts}
+                    {this.state.showSpinner ? null : posts}
 
                     <NewPostBtn />
                     <Modal show={this.state.showDeleteModal} closeText="cancel" submitText="delete" onClose={this.closeModal}
                         onSubmit={this.deletePost}>
-                        Are you sure you want to delete this post?
+                        <p>Are you sure you want to delete this post?</p>
                     </Modal>
+                    
                 </div>
             </div>
         )
