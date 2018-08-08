@@ -3,7 +3,7 @@
 I created this simple WYSIWYG editor app to learn react.
 
 Visit the application hosted on firebase
-https://c-m-editor.firebaseio.com 
+https://c-m-editor.firebaseapp.com 
 
 Features of this application
 
