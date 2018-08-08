@@ -26,6 +26,7 @@ export default class ToolBar extends Component {
                     <BtnAlignLeft />
                     <BtnAlignRight />
                     <BtnJustify />
+                    
                 </div>
             </div>
         )
