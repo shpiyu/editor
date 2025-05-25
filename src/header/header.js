@@ -6,8 +6,8 @@ export default class Header extends Component {
         return (
             <div className="app-header">
                 <div className="app-title">
-                    <h1>Charles Butler Editor</h1>
-                    <p>An online <b>WYSIWYG</b> editor</p>
+                    <h1>The Editor</h1>
+                    <p>your online writing companion</p>
                 </div>
             </div>
         )
